@@ -1,0 +1,68 @@
+# ----------------------------------------------
+# Autor: Jefferson Soares
+# Contato: contato@thedataengineer.com.br
+# Descrição: Stack de monitoramento
+# ----------------------------------------------
+
+version: '3.3' 
+services:
+
+  influxdb_tde:
+    build:
+      context: ./filesdocker
+      dockerfile: influxdb.dockerfile      
+    hostname: influxdb      
+    volumes:        
+      - ./data/influxdb/config/influxdb.conf:/etc/influxdb/influxdb.conf
+      - ./data/influxdb/dados:/var/lib/influxdb
+    environment: 
+      INFLUXDB_CONFIG_PATH: /etc/influxdb/influxdb.conf      
+    ports:      
+      - "8086:8086"
+      - "8089:8089/udp"      
+    networks:
+      thedataengineer:
+        ipv4_address: 192.10.0.100
+
+  telegraf_tde:
+    build:
+      context: ./filesdocker
+      dockerfile: telegraf.dockerfile      
+    depends_on: 
+      - influxdb_tde  
+    hostname: telegraf
+    volumes:              
+      - ./data/telegraf:/etc/telegraf
+    environment: 
+      TELEGRAF_CONFIG_PATH: /etc/telegraf/telegraf.conf
+      USER: maquina1
+      INFLUX_USER: thedataengineer
+      INFLUX_PASSWORD: thedataengineer
+      INFLUX_URL: http://192.10.0.100:8086
+    ports:      
+      - "8125:8125/udp"
+    networks:
+      thedataengineer:
+        ipv4_address: 192.10.0.101
+
+  grafana_tde:
+    build: 
+      context: ./filesdocker
+      dockerfile: grafana.dockerfile 
+    depends_on: 
+      - influxdb_tde  
+    hostname: grafana  
+    volumes:              
+      - ./data/grafana/data:/opt/grafana/data       
+    ports:      
+      - "3000:3000"
+    networks:
+      thedataengineer:
+        ipv4_address: 192.10.0.102
+
+networks:
+  thedataengineer:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.10.0.0/24" 
