@@ -613,3 +613,70 @@ t=2021-08-03T12:17:58+0000 lvl=info msg="Request Completed" logger=context userI
 t=2021-08-03T12:18:15+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
 t=2021-08-03T12:18:15+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=0 size=10 referer=
 t=2021-08-03T12:18:21+0000 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+t=2021-08-03T22:26:34+0000 lvl=info msg="Starting Grafana" logger=server version=8.0.6 commit=68fe9e3431 branch=HEAD compiled=2021-07-15T07:49:19+0000
+t=2021-08-03T22:26:34+0000 lvl=info msg="Config loaded from" logger=settings file=/opt/grafana/conf/defaults.ini
+t=2021-08-03T22:26:34+0000 lvl=info msg="Path Home" logger=settings path=/opt/grafana
+t=2021-08-03T22:26:34+0000 lvl=info msg="Path Data" logger=settings path=/opt/grafana/data
+t=2021-08-03T22:26:34+0000 lvl=info msg="Path Logs" logger=settings path=/opt/grafana/data/log
+t=2021-08-03T22:26:34+0000 lvl=info msg="Path Plugins" logger=settings path=/opt/grafana/data/plugins
+t=2021-08-03T22:26:34+0000 lvl=info msg="Path Provisioning" logger=settings path=/opt/grafana/conf/provisioning
+t=2021-08-03T22:26:34+0000 lvl=info msg="App mode production" logger=settings
+t=2021-08-03T22:26:34+0000 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-08-03T22:26:34+0000 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=/opt/grafana/data/grafana.db mode=-rwxrwxrwx expected=-rw-r-----
+t=2021-08-03T22:26:34+0000 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-08-03T22:26:34+0000 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=330 duration=603.088µs
+t=2021-08-03T22:26:34+0000 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-08-03T22:26:34+0000 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-08-03T22:26:34+0000 lvl=info msg="Registering plugin" logger=plugins id=grafana-plugin-admin-app
+t=2021-08-03T22:26:34+0000 lvl=info msg="Live Push Gateway initialization" logger=live.push_http
+t=2021-08-03T22:26:34+0000 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2021-08-03T22:26:50+0000 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=192.10.0.1 time_ms=0 size=29 referer=
+t=2021-08-03T22:26:58+0000 lvl=info msg="Successful Login" logger=http.server User=admin@localhost
+t=2021-08-03T22:27:07+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/user/password/reset status=400 remote_addr=192.10.0.1 time_ms=19 size=52 referer=http://192.10.0.102:3000/login
+t=2021-08-03T22:27:07+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:27:07+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=0 size=10 referer=
+t=2021-08-03T22:27:09+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:27:09+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:27:12+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:27:12+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:27:18+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:27:18+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:27:29+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:27:29+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:27:42+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:27:42+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:27:59+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:27:59+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:28:13+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:28:13+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:28:29+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:28:29+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:28:47+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:28:47+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:29:03+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:29:03+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:29:24+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:29:24+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=2 size=10 referer=
+t=2021-08-03T22:29:54+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:29:54+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:30:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:30:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:31:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:31:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:32:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:32:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=12 size=10 referer=
+t=2021-08-03T22:33:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:33:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:34:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:34:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:35:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:35:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:36:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:36:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:37:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:37:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=20 size=10 referer=
+t=2021-08-03T22:38:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:38:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=11 size=10 referer=
+t=2021-08-03T22:39:40+0000 lvl=warn msg="Request Origin is not authorized" logger=live origin=http://192.10.0.102:3000 appUrl=http://localhost:3000/ allowedOrigins=
+t=2021-08-03T22:39:40+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=403 remote_addr=192.10.0.1 time_ms=1 size=10 referer=
+t=2021-08-03T22:40:10+0000 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
